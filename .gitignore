@@ -1,6 +1,15 @@
 interface/node_modules/
 frontend/node_modules/
 frontend/node_modules/.bin/
+frontend/public/jmol-14.32.63/
 interface/LISE/
 interface/LISE
+frontend/public/jmol
+frontend/public/Jmol-14.32.63-full.tar.gz
+interface/tmp/
+interface/PDB/
+interface/results/
+interface/details/
+frontend/public/results/
+frontend/public/jmol.sh
 

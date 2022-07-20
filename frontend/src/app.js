@@ -6,7 +6,7 @@ import Display from "./display";
 export default class App extends React.Component {
    constructor(props) {
       super(props);
-      this.state = {value: 'results/1A6W_top10.pdb'};
+      this.state = {value: 'results/1A6W.pdb'};
     }
   
     receiveChange = (childData) => {

@@ -15,14 +15,14 @@ export default class Input extends React.Component {
 
   handleSubmit(event) {
     alert('A name was submitted: ' + this.state.value);
-    this.props.communicateChange(this.state.value);
     const fetchFile = async () => {
       const res = await fetch("http://localhost:3100/lise/" + this.state.value);
       const fileBlob = await res.blob();
       const fileObjectURL = URL.createObjectURL(fileBlob);
       alert(fileObjectURL);
     };
-    //fetchFile();
+    fetchFile();
+    this.props.communicateChange(this.state.value);
     event.preventDefault();
   }
 
@@ -32,7 +32,7 @@ export default class Input extends React.Component {
         <form onSubmit={this.handleSubmit} encType='multipart/form-data'>
           <label>
             Name:
-            <input type="text" value={this.state.value} pattern="(\d\w{3})" onChange={this.handleChange} />
+            <input type="text" value={this.state.value} pattern="\d\w{3}" onChange={this.handleChange} />
             <input type="file" accept=".pdb" />
           </label>
           <input type="submit" value="Submit" />
